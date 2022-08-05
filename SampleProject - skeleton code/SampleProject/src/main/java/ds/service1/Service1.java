@@ -40,6 +40,7 @@ public class Service1 extends Service1ImplBase{
 		responseObserver.onNext( reply ); 
 
 		responseObserver.onCompleted();
+		
 
 	}
 }

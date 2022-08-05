@@ -7,16 +7,26 @@ option java_outer_classname = "Service2Impl";
 package service2;
 
 // Interface exported by the server.
-service Service2 {
+service StockChecker {
   
-  rpc service2_do(RequestMessage) returns (ResponseMessage) {}
+  rpc itemChecker(ItemRequest) returns (ItemResponse) {}
+  
+  rpc inventoryChecker(InventoryRequest) returns (stream InventoryResponse){}
     
 }
 
-message RequestMessage {
-  string text = 1;  
+message InventoryRequest{
+  string check = 1;
 }
 
-message ResponseMessage {
-  int32 length = 1;
+message InventoryResponse{
+ string inventory = 1;
+}
+
+message ItemRequest {
+  string desiredItem = 1;  
+}
+
+message ItemResponse {
+  int32 itemQuantity = 1;
 }

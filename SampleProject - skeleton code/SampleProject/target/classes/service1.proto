@@ -7,16 +7,29 @@ option java_outer_classname = "Service1Impl";
 package service1;
 
 // Interface exported by the server.
-service Service1 {
+service ElectricControlSystem {
   
-  rpc service1_do(RequestMessage) returns (ResponseMessage) {}
+  rpc lightSwitch(stream LightRequest) returns (LightResponse) {}
+  
+  rpc volumeControl(stream VolumeRequest) returns (stream VolumeResponse)
     
 }
 
-message RequestMessage {
-  string text = 1;  
+
+message VolumeRequest {
+  int32 volInput = 1;
+
 }
 
-message ResponseMessage {
-  int32 length = 1;
+message VolumeResponse{
+  string volOutput = 1;
+}
+
+
+message LightRequest {
+  bool lightOn = 1;  
+}
+
+message LightResponse {
+  bool lightOff = 1;
 }
