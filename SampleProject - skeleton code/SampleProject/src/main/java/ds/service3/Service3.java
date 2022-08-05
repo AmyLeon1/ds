@@ -7,6 +7,8 @@ import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import io.grpc.stub.StreamObserver;
 
+//Service 3 = Saler Tracker
+//2 methods - Daily Earnings Calculator & Sales Performance Tracker for employees
 
 public class Service3 extends Service3ImplBase{
 

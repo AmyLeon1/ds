@@ -7,6 +7,8 @@ import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import io.grpc.stub.StreamObserver;
 
+//Service 1 = Electrics Control System
+//3 methods - light switch, music switch, volume control
 
 public class Service1 extends Service1ImplBase{
 

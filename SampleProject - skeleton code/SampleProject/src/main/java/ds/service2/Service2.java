@@ -7,6 +7,9 @@ import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import io.grpc.stub.StreamObserver;
 
+//Service 2 = Stock Checker
+//2 methods - Item Checker & Inventory Display
+
 
 public class Service2 extends Service2ImplBase{
 
